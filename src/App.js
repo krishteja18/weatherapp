@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import { ThreeCircles } from 'react-loader-spinner'
+
 import "./style.css"
 
 export default function App(props) {

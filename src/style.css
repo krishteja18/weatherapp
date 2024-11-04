@@ -1,0 +1,139 @@
+.app {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.flexContainer {
+  display: flex;
+  color: coral;
+  flex-direction: row;
+}
+.inputspan {
+  border: 2px solid coral;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.search {
+  background-color: coral;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  margin-left: 50%;
+  margin-top: 20px;
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: linear-gradient(
+        0deg,
+        rgb(0 0 0/50%) 30%,
+        #0000 0 70%,
+        rgb(0 0 0/100%) 0
+      )
+      50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0)
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+.loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+
+
+.weatherlist{
+
+display: flex;
+margin-top: 20px;
+gap:10px
+
+}
+
+
+
+
+.weather-table {
+  border: 2px solid black;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.temperature-section {
+  background-color: #d3d3d3;
+  text-align: center;sfsd
+  border-top: 2px solid black;
+}
+
+.temperature-header {
+  font-weight: bold;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+
+.temperature-values {
+  display: flex;
+  justify-content: space-between;
+  gap: 0; /* Resetting the gap as we'll use borders instead */
+}
+
+.min-max {
+  text-align: center;
+  width: 50%;
+  padding: 10px 0;
+  border-right: 1px solid black; /* Add border between min and max */
+}
+
+.min-max:last-child {
+  border-right: none; /* Remove right border on the last item */
+}
+
+.pressure-humidity {
+  background-color: #d3d3d3;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid black; /* Border between rows */
+}
+
+.row div {
+  width: 50%;
+  padding: 5px;
+}
+
+.value {
+  font-weight: bold;
+}
